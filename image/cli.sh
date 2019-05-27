@@ -26,7 +26,8 @@ $minimal_apt_get_install \
 	php$1-xml \
 	php$1-zip \
 	unzip \
-	curl
+	curl \
+	git
 
 if [ "$1" -ne "7.2" ] && [ "$1" -ne "7.3" ]; then
 	$minimal_apt_get_install php$1-mcrypt php-sodium
