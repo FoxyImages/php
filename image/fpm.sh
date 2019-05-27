@@ -13,6 +13,7 @@ $minimal_apt_get_install \
 	php$1-curl \
 	php$1-fpm \
 	php$1-gd \
+	php$1-gmp \
 	php$1-imap \
 	php$1-intl \
 	php$1-json \
