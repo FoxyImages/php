@@ -34,3 +34,6 @@ if [ "$1" -ne "7.2" ] && [ "$1" -ne "7.3" ]; then
 fi
 
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Composer speedup
+composer global require hirak/prestissimo:@stable
