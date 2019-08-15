@@ -1,8 +1,8 @@
 NAME = sunfoxcz/php-fpm
 
-.PHONY: all php56-cli php70-cli php71-cli php72-cli php73-cli php56-fpm php70-fpm php71-fpm php72-fpm php73-fpm
+.PHONY: all php56-cli php70-cli php71-cli php72-cli php73-cli php74-cli php56-fpm php70-fpm php71-fpm php72-fpm php73-fpm php74-fpm
 
-all: php56-cli php70-cli php71-cli php72-cli php73-cli php56-fpm php70-fpm php71-fpm php72-fpm php73-fpm
+all: php56-cli php70-cli php71-cli php72-cli php73-cli php74-cli php56-fpm php70-fpm php71-fpm php72-fpm php73-fpm php74-fpm
 
 php56-cli:
 	docker build -t $(NAME):5.6 --rm -f 5.6/cli/Dockerfile .
@@ -19,6 +19,9 @@ php72-cli:
 php73-cli:
 	docker build -t $(NAME):7.3 --rm -f 7.3/cli/Dockerfile .
 
+php74-cli:
+	docker build -t $(NAME):7.4 --rm -f 7.4/cli/Dockerfile .
+
 php56-fpm:
 	docker build -t $(NAME):5.6 --rm -f 5.6/fpm/Dockerfile .
 
@@ -33,3 +36,6 @@ php72-fpm:
 
 php73-fpm:
 	docker build -t $(NAME):7.3 --rm -f 7.3/fpm/Dockerfile .
+
+php74-fpm:
+	docker build -t $(NAME):7.4 --rm -f 7.4/fpm/Dockerfile .
