@@ -19,3 +19,36 @@ A minimal Ubuntu image based on `phusion/baseimage` with PHP from `ppa:ondrej/ph
  * [`7.1-fpm` (*7.1/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.1/fpm/Dockerfile)
  * [`7.0-fpm` (*7.0/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.0/fpm/Dockerfile)
  * [`5.6-fpm` (*5.6/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/5.6/fpm/Dockerfile)
+
+## PHP packages installed for `cli`
+
+ * bcmath
+ * bz2
+ * cli
+ * curl
+ * gd
+ * gmp
+ * imap
+ * intl
+ * json
+ * mbstring
+ * mcrypt (before php 7.2)
+ * mysql
+ * opcache
+ * pgsql
+ * readline
+ * soap
+ * sodium (from php 7.1)
+ * sqlite3
+ * xml
+ * zip
+
+## Additional packages installed for `fpm`
+
+ * fpm
+
+## APT packages added
+
+ * curl
+ * git
+ * unzip

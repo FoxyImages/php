@@ -32,7 +32,10 @@ $minimal_apt_get_install \
 
 PHP_VER=`echo $1 | sed -e 's/\.//g'`
 if [ "$PHP_VER" -lt "72" ]; then
-	$minimal_apt_get_install php$1-mcrypt php-sodium
+	$minimal_apt_get_install php$1-mcrypt
+fi
+if [ "$PHP_VER" -gt "70" ]; then
+	$minimal_apt_get_install php-sodium
 fi
 
 mkdir /var/www
