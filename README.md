@@ -4,7 +4,7 @@ A minimal Ubuntu image based on `phusion/baseimage` with PHP from `ppa:ondrej/ph
 
 ## Supported tags and respective `Dockerfile` links for CLI
 
- * [`7.4-cli`, `7-cli`, `cli`, `7`, `latest` (*7.4/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.4/cli/Dockerfile)]
+ * [`7.4-cli`, `7.4`, `7`, `7-cli`, `cli`, `latest` (*7.4/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.4/cli/Dockerfile)]
  * [`7.3-cli`, `7.3` (*7.3/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.3/cli/Dockerfile)
  * [`7.2-cli`, `7.2` (*7.2/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.2/cli/Dockerfile)
  * [`7.1-cli`, `7.1` (*7.1/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.1/cli/Dockerfile)
