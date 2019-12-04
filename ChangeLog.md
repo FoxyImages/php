@@ -1,3 +1,9 @@
+## 0.2.2 (release date: 04.12.2019)
+
+ * Finally fixed installation of `php-sodium` which is not needed any more for PHP 7.2 an newer
+ * Extension `php-sodium` now installs from PHP 7.0 and higher
+ * Fixed `dist-upgrade` during image build
+
 ## 0.2.1 (release date: 16.08.2019)
 
  * Fixed installation of `php-sodium` which resulted in installation of PHP 7.1 under 5.6 image
