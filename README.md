@@ -37,6 +37,7 @@ A minimal Ubuntu image based on `phusion/baseimage` with PHP from `ppa:ondrej/ph
  * opcache
  * pgsql
  * readline
+ * redis
  * soap
  * sodium (from php 7.0)
  * sqlite3

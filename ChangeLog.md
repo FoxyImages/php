@@ -1,3 +1,7 @@
+## 0.2.3 (release date: 05.06.2020)
+
+ * Added `redis` extension
+
 ## 0.2.2 (release date: 04.12.2019)
 
  * Finally fixed installation of `php-sodium` which is not needed any more for PHP 7.2 an newer
