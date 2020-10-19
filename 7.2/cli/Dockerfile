@@ -1,4 +1,4 @@
-FROM phusion/baseimage:latest
+FROM phusion/baseimage:latest-amd64
 MAINTAINER Tomas Jacik <tomas@jacik.cz>
 
 ADD image /build

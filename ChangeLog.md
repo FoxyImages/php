@@ -1,3 +1,7 @@
+## 0.3.0 (release date: 19.10.2020)
+
+ * Updated `phusion/baseimage` to `latest-amd64`
+
 ## 0.2.3 (release date: 05.06.2020)
 
  * Added `redis` extension
