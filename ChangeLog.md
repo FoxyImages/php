@@ -1,3 +1,8 @@
+## 0.3.1 (release date: 25.10.2020)
+
+ * Updated `composer` to `2.0`
+ * Removed global package `hirak/prestissimo` incompatible with new Composer
+
 ## 0.3.0 (release date: 19.10.2020)
 
  * Updated `phusion/baseimage` to `latest-amd64`

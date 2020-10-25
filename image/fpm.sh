@@ -55,6 +55,3 @@ sed -i "s/VERSION/${1}/g" /etc/service/php-fpm/run
 sed -i "s/VERSION/${1}/g" /etc/php/$1/fpm/php-fpm.conf
 
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# Composer speedup
-composer global require hirak/prestissimo:@stable
