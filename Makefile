@@ -2,7 +2,7 @@ NAME = sunfoxcz/php
 
 all: build
 
-build: 5.6 7.0 7.1 7.2 7.3 7.4
+build: 5.6 7.0 7.1 7.2 7.3 7.4 8.0
 
 5.6: 5.6-cli 5.6-fpm
 7.0: 7.0-cli 7.0-fpm
@@ -10,6 +10,7 @@ build: 5.6 7.0 7.1 7.2 7.3 7.4
 7.2: 7.2-cli 7.2-fpm
 7.3: 7.3-cli 7.3-fpm
 7.4: 7.4-cli 7.4-fpm
+8.0: 8.0-cli 8.0-fpm
 
 5.6-cli:
 	docker build -t $(NAME):5.6-cli --rm -f 5.6/cli/Dockerfile .
@@ -39,6 +40,11 @@ build: 5.6 7.0 7.1 7.2 7.3 7.4
 	docker tag $(NAME):7.4-cli $(NAME):cli
 	docker tag $(NAME):7.4-cli $(NAME):latest
 
+8.0-cli:
+	docker build -t $(NAME):8.0-cli --rm -f 8.0/cli/Dockerfile .
+	docker tag $(NAME):8.0-cli $(NAME):8
+	docker tag $(NAME):8.0-cli $(NAME):8-cli
+
 5.6-fpm:
 	docker build -t $(NAME):5.6-fpm --rm -f 5.6/fpm/Dockerfile .
 
@@ -59,6 +65,10 @@ build: 5.6 7.0 7.1 7.2 7.3 7.4
 	docker tag $(NAME):7.4-fpm $(NAME):7-fpm
 	docker tag $(NAME):7.4-fpm $(NAME):fpm
 
+8.0-fpm:
+	docker build -t $(NAME):8.0-fpm --rm -f 8.0/fpm/Dockerfile .
+	docker tag $(NAME):8.0-fpm $(NAME):8-fpm
+
 release:
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '5.6-cli'; then echo "$(NAME):5.6-cli is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.0-cli'; then echo "$(NAME):7.0-cli is not yet built. Please run 'make build'"; false; fi
@@ -66,12 +76,14 @@ release:
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.2-cli'; then echo "$(NAME):7.2-cli is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.3-cli'; then echo "$(NAME):7.3-cli is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.4-cli'; then echo "$(NAME):7.4-cli is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.0-cli'; then echo "$(NAME):8.0-cli is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '5.6-fpm'; then echo "$(NAME):5.6-fpm is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.0-fpm'; then echo "$(NAME):7.0-fpm is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.1-fpm'; then echo "$(NAME):7.1-fpm is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.2-fpm'; then echo "$(NAME):7.2-fpm is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.3-fpm'; then echo "$(NAME):7.3-fpm is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.4-fpm'; then echo "$(NAME):7.4-fpm is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.0-fpm'; then echo "$(NAME):8.0-fpm is not yet built. Please run 'make build'"; false; fi
 	docker push $(NAME):5.6-cli
 	docker push $(NAME):7.0-cli
 	docker push $(NAME):7.1-cli
@@ -83,6 +95,9 @@ release:
 	docker push $(NAME):7-cli
 	docker push $(NAME):cli
 	docker push $(NAME):latest
+	docker push $(NAME):8.0-cli
+	docker push $(NAME):8-cli
+	docker push $(NAME):8
 	docker push $(NAME):5.6-fpm
 	docker push $(NAME):7.0-fpm
 	docker push $(NAME):7.1-fpm
@@ -91,3 +106,5 @@ release:
 	docker push $(NAME):7.4-fpm
 	docker push $(NAME):7-fpm
 	docker push $(NAME):fpm
+	docker push $(NAME):8.0-fpm
+	docker push $(NAME):8-fpm

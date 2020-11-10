@@ -1,3 +1,7 @@
+## 0.4.0 (release date: 10.11.2020)
+
+ * Added PHP 8.0
+
 ## 0.3.1 (release date: 25.10.2020)
 
  * Updated `composer` to `2.0`
