@@ -1,3 +1,8 @@
+## 0.5.0 (release date: 03.12.2020)
+
+ * Removed unsupported PHP versions 5.6, 7.0 and 7.1
+ * Make PHP 8.0 default version
+
 ## 0.4.0 (release date: 10.11.2020)
 
  * Added PHP 8.0
