@@ -1,3 +1,8 @@
+## 0.5.1 (release date: 08.04.2021)
+
+ * Limit en locales other than `en_US`
+ * Add `cs_CZ` locale
+
 ## 0.5.0 (release date: 03.12.2020)
 
  * Removed unsupported PHP versions 5.6, 7.0 and 7.1
