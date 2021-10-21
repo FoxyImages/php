@@ -4,9 +4,9 @@ A minimal Ubuntu image based on `phusion/baseimage` with PHP from `ppa:ondrej/ph
 
 ## Supported tags and respective `Dockerfile` links for CLI
 
- * [`8.1-cli`, `8.1` (*8.1/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.1/cli/Dockerfile)]
- * [`8.0-cli`, `8.0`, `8`, `8-cli`, `cli`, `latest` (*8.0/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.0/cli/Dockerfile)]
- * [`7.4-cli`, `7.4`, `7`, `7-cli` (*7.4/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.4/cli/Dockerfile)]
+ * [`8.1-cli`, `8.1` (*8.1/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.1/cli/Dockerfile)
+ * [`8.0-cli`, `8.0`, `8`, `8-cli`, `cli`, `latest` (*8.0/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.0/cli/Dockerfile)
+ * [`7.4-cli`, `7.4`, `7`, `7-cli` (*7.4/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.4/cli/Dockerfile)
  * [`7.3-cli`, `7.3` (*7.3/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/7.3/cli/Dockerfile)
 
 ## Supported tags and respective `Dockerfile` links for FPM
