@@ -1,3 +1,9 @@
+## 0.6.0 (release date: 21.10.2021)
+
+ * Removed unsupported PHP version 7.2
+ * Make PHP 8.0 default version for FPM
+ * Added PHP 8.1
+
 ## 0.5.1 (release date: 08.04.2021)
 
  * Limit en locales other than `en_US`
@@ -27,7 +33,7 @@
 
 ## 0.2.2 (release date: 04.12.2019)
 
- * Finally fixed installation of `php-sodium` which is not needed any more for PHP 7.2 an newer
+ * Finally fixed installation of `php-sodium` which is not needed any more for PHP 7.2 and newer
  * Extension `php-sodium` now installs from PHP 7.0 and higher
  * Fixed `dist-upgrade` during image build
 

@@ -20,7 +20,6 @@ $minimal_apt_get_install \
 	php$1-opcache \
 	php$1-pgsql \
 	php$1-readline \
-	php$1-redis \
 	php$1-soap \
 	php$1-sqlite3 \
 	php$1-xml \
@@ -32,6 +31,9 @@ $minimal_apt_get_install \
 PHP_VER=`echo $1 | sed -e 's/\.//g'`
 if [ "$PHP_VER" -lt "80" ]; then
 	$minimal_apt_get_install php$1-json
+fi
+if [ "$PHP_VER" -lt "80" ]; then
+	$minimal_apt_get_install php$1-redis
 fi
 
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
