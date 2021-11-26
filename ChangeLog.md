@@ -1,3 +1,7 @@
+## 0.7.0 (release date: 26.11.2021)
+
+ * Make PHP 8.1 default version
+
 ## 0.6.0 (release date: 21.10.2021)
 
  * Removed unsupported PHP version 7.2
