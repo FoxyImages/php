@@ -1,3 +1,7 @@
+## 0.8.0 (release date: 22.02.2022)
+
+ * Use `phusion/baseimage:focal-1.0.0` and thus `Ubuntu 20.04`
+
 ## 0.7.0 (release date: 26.11.2021)
 
  * Make PHP 8.1 default version

@@ -1,4 +1,4 @@
-FROM phusion/baseimage:latest-amd64
+FROM phusion/baseimage:focal-1.0.0
 MAINTAINER Tomas Jacik <tomas@jacik.cz>
 
 ADD image /build
