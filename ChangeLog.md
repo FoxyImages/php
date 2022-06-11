@@ -1,3 +1,7 @@
+## 0.9.0 (release date: 11.06.2022)
+
+ * Removed unsupported PHP version 7.3
+
 ## 0.8.0 (release date: 22.02.2022)
 
  * Use `phusion/baseimage:focal-1.0.0` and thus `Ubuntu 20.04`
