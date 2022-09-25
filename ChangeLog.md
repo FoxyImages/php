@@ -1,3 +1,7 @@
+## 1.0.0 (release date: 25.09.2022)
+
+ * Added PHP 8.1
+
 ## 0.9.0 (release date: 11.06.2022)
 
  * Use `phusion/baseimage:jammy-1.0.0` and thus `Ubuntu 22.04`
