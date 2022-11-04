@@ -1,4 +1,4 @@
-FROM phusion/baseimage:jammy-1.0.0
+FROM phusion/baseimage:jammy-1.0.1
 MAINTAINER Tomas Jacik <tomas@jacik.cz>
 
 ADD image /build

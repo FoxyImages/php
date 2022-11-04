@@ -1,3 +1,7 @@
+## 1.0.1 (release date: 04.11.2022)
+
+ * Update syslog-ng.conf for Ubuntu 22.04
+
 ## 1.0.0 (release date: 25.09.2022)
 
  * Added PHP 8.1
