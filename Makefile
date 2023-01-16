@@ -1,6 +1,6 @@
 NAME = sunfoxcz/php
 
-all: build
+all: build release clean
 
 build: 7.4 8.0 8.1 8.2
 
@@ -76,3 +76,6 @@ release:
 	docker push $(NAME):8.2-fpm
 	docker push $(NAME):8-fpm
 	docker push $(NAME):fpm
+
+clean:
+	docker builder prune
