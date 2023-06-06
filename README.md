@@ -26,6 +26,7 @@ A minimal Ubuntu image based on `phusion/baseimage` with PHP from `ppa:ondrej/ph
  * gmp
  * imap
  * intl
+ * imagick
  * json
  * mbstring
  * mysql

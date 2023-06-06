@@ -16,6 +16,7 @@ $minimal_apt_get_install \
 	php$1-gmp \
 	php$1-imap \
 	php$1-intl \
+	php$1-imagick \
 	php$1-mbstring \
 	php$1-mysql \
 	php$1-opcache \

@@ -1,3 +1,7 @@
+## 2.0.1 (release date: 06.06.2023)
+
+ * Added `imagick` extension
+
 ## 2.0.0 (release date: 10.12.2022)
 
  * Updated `8`, `8-cli`, `8-fpm`, `cli`, `fpm`, `latest` version to `8.2`
