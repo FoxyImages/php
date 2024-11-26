@@ -1,5 +1,5 @@
-FROM phusion/baseimage:jammy-1.0.1
-MAINTAINER Tomas Jacik <tomas@jacik.cz>
+FROM phusion/baseimage:jammy-1.0.4
+LABEL org.opencontainers.image.authors="tomas@jacik.cz"
 
 ADD image /build
 
