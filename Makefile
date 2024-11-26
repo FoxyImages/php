@@ -31,10 +31,10 @@ build: 7.4 8.0 8.1 8.2 8.3
 8.3-cli:
 	docker build -t $(NAME):8.3-cli --rm -f 8.3/cli/Dockerfile .
 	docker tag $(NAME):8.3-cli $(NAME):8.3
-	docker tag $(NAME):8.0-cli $(NAME):8-cli
-	docker tag $(NAME):8.0-cli $(NAME):8
-	docker tag $(NAME):8.0-cli $(NAME):cli
-	docker tag $(NAME):8.0-cli $(NAME):latest
+	docker tag $(NAME):8.3-cli $(NAME):8-cli
+	docker tag $(NAME):8.3-cli $(NAME):8
+	docker tag $(NAME):8.3-cli $(NAME):cli
+	docker tag $(NAME):8.3-cli $(NAME):latest
 
 7.4-fpm:
 	docker build -t $(NAME):7.4-fpm --rm -f 7.4/fpm/Dockerfile .
@@ -51,8 +51,8 @@ build: 7.4 8.0 8.1 8.2 8.3
 
 8.3-fpm:
 	docker build -t $(NAME):8.3-fpm --rm -f 8.3/fpm/Dockerfile .
-	docker tag $(NAME):8.2-fpm $(NAME):8-fpm
-	docker tag $(NAME):8.2-fpm $(NAME):fpm
+	docker tag $(NAME):8.3-fpm $(NAME):8-fpm
+	docker tag $(NAME):8.3-fpm $(NAME):fpm
 
 release:
 	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.4-cli'; then echo "$(NAME):7.4-cli is not yet built. Please run 'make build'"; false; fi
