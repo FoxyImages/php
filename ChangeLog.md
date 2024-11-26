@@ -1,3 +1,9 @@
+## 4.0.0 (release date: 26.11.2024)
+
+ * Use `phusion/baseimage:noble-1.0.0` and thus `Ubuntu 24.04`
+ * Added PHP 8.4
+ * Updated `8`, `8-cli`, `8-fpm`, `cli`, `fpm`, `latest` version to `8.4`
+
 ## 3.0.0 (release date: 05.12.2023)
 
  * Added PHP 8.3
