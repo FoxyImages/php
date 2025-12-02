@@ -1,3 +1,7 @@
+## 5.0.0 (release date: 02.12.2025)
+
+ * Use `phusion/baseimage:noble-1.0.2`
+
 ## 4.0.0 (release date: 26.11.2024)
 
  * Use `phusion/baseimage:noble-1.0.0` and thus `Ubuntu 24.04`
