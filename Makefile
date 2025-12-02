@@ -71,19 +71,20 @@ build: 7.4 8.0 8.1 8.2 8.3 8.4 8.5
 	docker tag $(NAME):8.5-fpm $(NAME):fpm
 
 release:
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.4-cli'; then echo "$(NAME):7.4-cli is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.0-cli'; then echo "$(NAME):8.0-cli is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.1-cli'; then echo "$(NAME):8.1-cli is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.2-cli'; then echo "$(NAME):8.2-cli is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.3-cli'; then echo "$(NAME):8.3-cli is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.4-cli'; then echo "$(NAME):8.4-cli is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '7.4-fpm'; then echo "$(NAME):7.4-fpm is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.0-fpm'; then echo "$(NAME):8.0-fpm is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.1-fpm'; then echo "$(NAME):8.1-fpm is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.2-fpm'; then echo "$(NAME):8.2-fpm is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.3-fpm'; then echo "$(NAME):8.3-fpm is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.4-fpm'; then echo "$(NAME):8.4-fpm is not yet built. Please run 'make build'"; false; fi
-	@if ! docker images $(NAME) | awk '{ print $$2 }' | grep -q -F '8.5-fpm'; then echo "$(NAME):8.5-fpm is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '7.4-cli'; then echo "$(NAME):7.4-cli is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.0-cli'; then echo "$(NAME):8.0-cli is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.1-cli'; then echo "$(NAME):8.1-cli is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.2-cli'; then echo "$(NAME):8.2-cli is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.3-cli'; then echo "$(NAME):8.3-cli is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.4-cli'; then echo "$(NAME):8.4-cli is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.5-cli'; then echo "$(NAME):8.4-cli is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '7.4-fpm'; then echo "$(NAME):7.4-fpm is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.0-fpm'; then echo "$(NAME):8.0-fpm is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.1-fpm'; then echo "$(NAME):8.1-fpm is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.2-fpm'; then echo "$(NAME):8.2-fpm is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.3-fpm'; then echo "$(NAME):8.3-fpm is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.4-fpm'; then echo "$(NAME):8.4-fpm is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.5-fpm'; then echo "$(NAME):8.5-fpm is not yet built. Please run 'make build'"; false; fi
 	docker push $(NAME):7.4-cli
 	docker push $(NAME):7.4
 	docker push $(NAME):7-cli
