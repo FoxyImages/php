@@ -1,6 +1,8 @@
 ## 5.0.0 (release date: 02.12.2025)
 
  * Use `phusion/baseimage:noble-1.0.2`
+ * Added PHP 8.5
+ * Updated `8`, `8-cli`, `8-fpm`, `cli`, `fpm`, `latest` version to `8.5`
 
 ## 4.0.0 (release date: 26.11.2024)
 

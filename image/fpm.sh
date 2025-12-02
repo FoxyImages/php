@@ -19,7 +19,6 @@ $minimal_apt_get_install \
 	php$1-imagick \
 	php$1-mbstring \
 	php$1-mysql \
-	php$1-opcache \
 	php$1-pgsql \
 	php$1-readline \
 	php$1-soap \
@@ -36,6 +35,9 @@ if [ "$PHP_VER" -lt "80" ]; then
 fi
 if [ "$PHP_VER" -lt "81" ]; then
 	$minimal_apt_get_install php$1-redis
+fi
+if [ "$PHP_VER" -lt "85" ]; then
+	$minimal_apt_get_install php$1-opcache
 fi
 
 mkdir /var/www
