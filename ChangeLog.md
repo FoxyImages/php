@@ -1,3 +1,8 @@
+## 5.0.1 (release date: 17.03.2025)
+
+ * Removed unsupported PHP versions
+ * Added `DOCKER_BUILD_FLAGS` to `Makefile`
+
 ## 5.0.0 (release date: 02.12.2025)
 
  * Use `phusion/baseimage:noble-1.0.2`

@@ -29,12 +29,6 @@ $minimal_apt_get_install \
 	git
 
 PHP_VER=`echo $1 | sed -e 's/\.//g'`
-if [ "$PHP_VER" -lt "80" ]; then
-	$minimal_apt_get_install php$1-json
-fi
-if [ "$PHP_VER" -lt "80" ]; then
-	$minimal_apt_get_install php$1-redis
-fi
 if [ "$PHP_VER" -lt "85" ]; then
 	$minimal_apt_get_install php$1-opcache
 fi
