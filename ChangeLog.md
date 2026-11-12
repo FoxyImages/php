@@ -1,3 +1,7 @@
+## 5.1.0 (release date: 12.11.2026)
+
+ * Added PHP 8.6.0 RC5
+
 ## 5.0.1 (release date: 17.03.2025)
 
  * Removed unsupported PHP versions

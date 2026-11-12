@@ -3,12 +3,13 @@ DOCKER_BUILD_FLAGS ?=
 
 all: build release clean
 
-build: 8.2 8.3 8.4 8.5
+build: 8.2 8.3 8.4 8.5 8.6
 
 8.2: 8.2-cli 8.2-fpm
 8.3: 8.3-cli 8.3-fpm
 8.4: 8.4-cli 8.4-fpm
 8.5: 8.5-cli 8.5-fpm
+8.6: 8.6-cli 8.6-fpm
 
 8.2-cli:
 	docker build $(DOCKER_BUILD_FLAGS) -t $(NAME):8.2-cli --rm -f 8.2/cli/Dockerfile .
@@ -30,6 +31,10 @@ build: 8.2 8.3 8.4 8.5
 	docker tag $(NAME):8.5-cli $(NAME):cli
 	docker tag $(NAME):8.5-cli $(NAME):latest
 
+8.6-cli:
+	docker build $(DOCKER_BUILD_FLAGS) -t $(NAME):8.6-cli --rm -f 8.6/cli/Dockerfile .
+	docker tag $(NAME):8.6-cli $(NAME):8.6
+
 8.2-fpm:
 	docker build $(DOCKER_BUILD_FLAGS) -t $(NAME):8.2-fpm --rm -f 8.2/fpm/Dockerfile .
 
@@ -44,6 +49,9 @@ build: 8.2 8.3 8.4 8.5
 	docker tag $(NAME):8.5-fpm $(NAME):8-fpm
 	docker tag $(NAME):8.5-fpm $(NAME):fpm
 
+8.6-fpm:
+	docker build $(DOCKER_BUILD_FLAGS) -t $(NAME):8.6-fpm --rm -f 8.6/fpm/Dockerfile .
+
 release:
 	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.2-cli'; then echo "$(NAME):8.2-cli is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.3-cli'; then echo "$(NAME):8.3-cli is not yet built. Please run 'make build'"; false; fi
@@ -53,6 +61,7 @@ release:
 	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.3-fpm'; then echo "$(NAME):8.3-fpm is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.4-fpm'; then echo "$(NAME):8.4-fpm is not yet built. Please run 'make build'"; false; fi
 	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.5-fpm'; then echo "$(NAME):8.5-fpm is not yet built. Please run 'make build'"; false; fi
+	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.6-fpm'; then echo "$(NAME):8.6-fpm is not yet built. Please run 'make build'"; false; fi
 	docker push $(NAME):8.2-cli
 	docker push $(NAME):8.2
 	docker push $(NAME):8.3-cli
@@ -61,6 +70,8 @@ release:
 	docker push $(NAME):8.4
 	docker push $(NAME):8.5-cli
 	docker push $(NAME):8.5
+	docker push $(NAME):8.6-cli
+	docker push $(NAME):8.6
 	docker push $(NAME):8-cli
 	docker push $(NAME):8
 	docker push $(NAME):cli
@@ -69,6 +80,7 @@ release:
 	docker push $(NAME):8.3-fpm
 	docker push $(NAME):8.4-fpm
 	docker push $(NAME):8.5-fpm
+	docker push $(NAME):8.6-fpm
 	docker push $(NAME):8-fpm
 	docker push $(NAME):fpm
 

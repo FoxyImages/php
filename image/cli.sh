@@ -3,7 +3,10 @@ set -e
 source /build/buildconfig
 set -x
 
-LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
+dpkg -i /tmp/debsuryorg-archive-keyring.deb
+rm /tmp/debsuryorg-archive-keyring.deb
+echo "deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyring.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/debsuryorg-php.list
 
 apt-get update
 $minimal_apt_get_install \
@@ -13,9 +16,7 @@ $minimal_apt_get_install \
 	php$1-curl \
 	php$1-gd \
 	php$1-gmp \
-	php$1-imap \
 	php$1-intl \
-	php$1-imagick \
 	php$1-mbstring \
 	php$1-mysql \
 	php$1-pgsql \
@@ -31,6 +32,9 @@ $minimal_apt_get_install \
 PHP_VER=`echo $1 | sed -e 's/\.//g'`
 if [ "$PHP_VER" -lt "85" ]; then
 	$minimal_apt_get_install php$1-opcache
+fi
+if [ "$PHP_VER" -lt "86" ]; then
+	$minimal_apt_get_install php$1-imap php$1-imagick
 fi
 
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
