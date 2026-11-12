@@ -3,6 +3,7 @@ set -e
 source /build/buildconfig
 set -x
 
+sed -i '/^[[:space:]]*[^#[:space:]]/s/^/# /' /etc/locale.gen
 echo "en_US.UTF-8 UTF-8" > /var/lib/locales/supported.d/en
 echo "cs_CZ.UTF-8 UTF-8" > /var/lib/locales/supported.d/cs
 

@@ -1,4 +1,4 @@
-FROM phusion/baseimage:noble-1.0.2
+FROM phusion/baseimage:resolute
 LABEL org.opencontainers.image.authors="tomas@jacik.cz"
 
 ADD image /build

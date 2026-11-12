@@ -1,3 +1,7 @@
+## 6.0.0 (release date: 12.11.2026)
+
+ * Use `phusion/baseimage:resolute` and thus `Ubuntu 26.04`
+
 ## 5.1.0 (release date: 12.11.2026)
 
  * Added PHP 8.6.0 RC5
