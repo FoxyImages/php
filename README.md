@@ -4,16 +4,16 @@ A minimal Ubuntu image based on `phusion/baseimage` with PHP from `ppa:ondrej/ph
 
 ## Supported tags and respective `Dockerfile` links for CLI
 
- * [`8.6-cli`, `8.6` (*8.6/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.6/cli/Dockerfile)
- * [`8.5-cli`, `8.5`, `8`, `8-cli`, `cli`, `latest` (*8.5/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.5/cli/Dockerfile)
+ * [`8.6-cli`, `8.6`, `8`, `8-cli`, `cli`, `latest` (*8.6/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.6/cli/Dockerfile)
+ * [`8.5-cli`, `8.5` (*8.5/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.5/cli/Dockerfile)
  * [`8.4-cli`, `8.4` (*8.4/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.4/cli/Dockerfile)
  * [`8.3-cli`, `8.3` (*8.3/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.3/cli/Dockerfile)
  * [`8.2-cli`, `8.2` (*8.2/cli/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.2/cli/Dockerfile)
 
 ## Supported tags and respective `Dockerfile` links for FPM
 
- * [`8.6-fpm` (*8.6/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.6/fpm/Dockerfile)
- * [`8.5-fpm`, `8-fpm`, `fpm` (*8.5/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.5/fpm/Dockerfile)
+ * [`8.6-fpm`, `8-fpm`, `fpm` (*8.6/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.6/fpm/Dockerfile)
+ * [`8.5-fpm` (*8.5/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.5/fpm/Dockerfile)
  * [`8.4-fpm` (*8.4/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.4/fpm/Dockerfile)
  * [`8.3-fpm` (*8.3/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.3/fpm/Dockerfile)
  * [`8.2-fpm` (*8.2/fpm/Dockerfile*)](https://github.com/FoxyImages/php-fpm/blob/master/8.2/fpm/Dockerfile)

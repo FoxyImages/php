@@ -26,14 +26,14 @@ build: 8.2 8.3 8.4 8.5 8.6
 8.5-cli:
 	docker build $(DOCKER_BUILD_FLAGS) -t $(NAME):8.5-cli --rm -f 8.5/cli/Dockerfile .
 	docker tag $(NAME):8.5-cli $(NAME):8.5
-	docker tag $(NAME):8.5-cli $(NAME):8-cli
-	docker tag $(NAME):8.5-cli $(NAME):8
-	docker tag $(NAME):8.5-cli $(NAME):cli
-	docker tag $(NAME):8.5-cli $(NAME):latest
 
 8.6-cli:
 	docker build $(DOCKER_BUILD_FLAGS) -t $(NAME):8.6-cli --rm -f 8.6/cli/Dockerfile .
 	docker tag $(NAME):8.6-cli $(NAME):8.6
+	docker tag $(NAME):8.6-cli $(NAME):8-cli
+	docker tag $(NAME):8.6-cli $(NAME):8
+	docker tag $(NAME):8.6-cli $(NAME):cli
+	docker tag $(NAME):8.6-cli $(NAME):latest
 
 8.2-fpm:
 	docker build $(DOCKER_BUILD_FLAGS) -t $(NAME):8.2-fpm --rm -f 8.2/fpm/Dockerfile .
@@ -46,11 +46,11 @@ build: 8.2 8.3 8.4 8.5 8.6
 
 8.5-fpm:
 	docker build $(DOCKER_BUILD_FLAGS) -t $(NAME):8.5-fpm --rm -f 8.5/fpm/Dockerfile .
-	docker tag $(NAME):8.5-fpm $(NAME):8-fpm
-	docker tag $(NAME):8.5-fpm $(NAME):fpm
 
 8.6-fpm:
 	docker build $(DOCKER_BUILD_FLAGS) -t $(NAME):8.6-fpm --rm -f 8.6/fpm/Dockerfile .
+	docker tag $(NAME):8.6-fpm $(NAME):8-fpm
+	docker tag $(NAME):8.6-fpm $(NAME):fpm
 
 release:
 	@if ! docker images $(NAME) --format "{{.Tag}}" | grep -q -F '8.2-cli'; then echo "$(NAME):8.2-cli is not yet built. Please run 'make build'"; false; fi

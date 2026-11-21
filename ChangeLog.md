@@ -1,3 +1,8 @@
+## 6.1.0 (release date: 19.11.2026)
+
+ * Added PHP 8.6.0
+ * Updated `8`, `8-cli`, `8-fpm`, `cli`, `fpm`, `latest` version to `8.6`
+
 ## 6.0.0 (release date: 12.11.2026)
 
  * Use `phusion/baseimage:resolute` and thus `Ubuntu 26.04`
